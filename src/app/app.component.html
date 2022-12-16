@@ -1,0 +1,72 @@
+<div class="overflow">
+  <div>
+    <div>
+      <label>Entrances</label>
+      <select (change)="changeCardAnimation($event)">
+        <option
+          *ngFor="let animation of entriesAnimations"
+          [value]="animation.value"
+        >
+          {{ animation.name }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>Exits</label>
+      <select (change)="changeCardAnimation($event)">
+        <option
+          *ngFor="let animation of exitAnimations"
+          [value]="animation.value"
+        >
+          {{ animation.name }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>Basic</label>
+      <select (change)="changeCardAnimation($event)">
+        <option
+          *ngFor="let animation of basicAnimations"
+          [value]="animation.value"
+        >
+          {{ animation.name }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>Text</label>
+      <select (change)="changeTextAnimation($event)">
+        <option
+          *ngFor="let animation of textAnimations"
+          [value]="animation.value"
+        >
+          {{ animation.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div expAnimation [eleAnimation]="eleAnimation">
+        <div>
+          <div div-avatar class="example-header-image"></div>
+          <div>Shiba Inu</div>
+        </div>
+        <img
+          div-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+        <div>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 expAnimation [textAnimation]="textAnimation">ANIMATIONS</h1>
+    </div>
+  </div>
+</div>
